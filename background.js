@@ -17,5 +17,6 @@ chrome.runtime.onInstalled.addListener(() => {
     });
     chrome.action.onClicked.addListener(function (tab) {
         console.log(tab.url.replace("shorts\/", 'watch?v='));
+        chrome.tabs.update(tab.id, { url: tab.url.replace("shorts\/", 'watch?v=') });
     });
 });
