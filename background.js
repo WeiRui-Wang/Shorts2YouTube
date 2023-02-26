@@ -16,7 +16,6 @@ chrome.runtime.onInstalled.addListener(() => {
         chrome.declarativeContent.onPageChanged.addRules(rules);
     });
     chrome.action.onClicked.addListener(function (tab) {
-        console.log(tab.url.replace("shorts\/", 'watch?v='));
         chrome.tabs.update(tab.id, { url: tab.url.replace("shorts\/", 'watch?v=') });
     });
 });
