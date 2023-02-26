@@ -2,4 +2,15 @@
     "manifest_version": 3,
     "name": "Shorts2YouTube",
     "version": "0.0.1",
+    "description": "Turns Shorts video player on into normal video player on YouTube with a single click",
+    "action": {
+        "default_title": "Turns Shorts to YouTube",
+        "default_icon": "default_icon.png"
+    },
+    "permissions": [
+        "declarativeContent"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
 }
