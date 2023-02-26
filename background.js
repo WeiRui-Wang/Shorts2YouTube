@@ -15,4 +15,7 @@ chrome.runtime.onInstalled.addListener(() => {
         let rules = [rule];
         chrome.declarativeContent.onPageChanged.addRules(rules);
     });
+    chrome.action.onClicked.addListener(function (tab) {
+        console.log(tab.url.replace("shorts\/", 'watch?v='));
+    });
 });
